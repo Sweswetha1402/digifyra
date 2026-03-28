@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enquiry | Digifyra</title>
+  <meta name="description" content="Send your details for a wedding website, birthday invitation, love story page, portfolio or company website.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#c65d3b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-order">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">
+          <img class="brand__mark" src="digifyra-mark.png" alt="Digifyra logo">
+          <span>Digifyra<small>Website enquiry</small></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggle>Menu</button>
+        <nav class="site-nav" data-nav>
+          <a href="templates.html">Templates</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="services.html">Services</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-panel reveal">
+          <div>
+            <div class="eyebrow">Share your website requirement</div>
+            <h1 class="display">Tell us what you would like <span>to create</span>.</h1>
+            <p class="lead">Whether you need an invitation website, portfolio, landing page for your company or a mobile friendly website, share the details and we will get back to you.</p>
+            <div class="notice-bar" id="selected-template-banner" hidden style="margin-top:1rem;">
+              <strong>Selected template</strong>
+              <p class="helper-text" id="selected-template-text"></p>
+            </div>
+          </div>
+          <div class="info-panel reveal">
+            <div class="eyebrow">Best for</div>
+            <ul class="feature-list">
+              <li>Wedding and birthday invitations</li>
+              <li>Love story surprises and anniversary pages</li>
+              <li>Portfolio websites, landing pages and mobile friendly company websites</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container form-layout">
+          <article class="form-panel reveal">
+            <div class="eyebrow">Enquiry details</div>
+            <form data-form-intent data-email="digifyra.in@gmail.com" data-subject="Website Enquiry from Digifyra Site">
+              <input class="honeypot" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="field-grid">
+                <label>
+                  Name
+                  <input type="text" name="name" placeholder="Your name" required>
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" placeholder="you@example.com" required>
+                </label>
+              </div>
+              <div class="field-grid">
+                <label>
+                  Phone
+                  <input type="tel" name="phone" placeholder="+91 98765 43210">
+                </label>
+                <label>
+                  Website type
+                  <select name="service" required>
+                    <option value="Wedding Website">Wedding Website</option>
+                    <option value="Birthday Invitation Website">Birthday Invitation Website</option>
+                    <option value="Love Story Surprise Page">Love Story Surprise Page</option>
+                    <option value="Portfolio Website">Portfolio Website</option>
+                    <option value="QR Restaurant Menu">QR Restaurant Menu</option>
+                    <option value="Landing Page for Company">Landing Page for Company</option>
+                    <option value="Company Website">Company Website</option>
+                    <option value="Mobile Friendly Website">Mobile Friendly Website</option>
+                  </select>
+                </label>
+              </div>
+              <input type="hidden" name="template_name" value="">
+              <div class="field-grid">
+                <label>
+                  Plan
+                  <select name="plan" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Premium">Premium</option>
+                  </select>
+                </label>
+                <label>
+                  Delivery timeline
+                  <select name="timeline">
+                    <option value="Within 3 days">Within 3 days</option>
+                    <option value="Within 1 week">Within 1 week</option>
+                    <option value="Within 2 weeks">Within 2 weeks</option>
+                  </select>
+                </label>
+              </div>
+              <label>
+                Project details
+                <textarea name="details" placeholder="Share names, event date, venue, sections you need, branding direction, campaign goal or any references." required></textarea>
+              </label>
+              <button class="btn" type="submit">Send Enquiry by Email</button>
+              <p class="fine-print">Clicking submit will try to open an email compose screen in your browser with the enquiry details filled in.</p>
+            </form>
+          </article>
+
+          <article class="info-panel reveal">
+            <div class="eyebrow">What to include</div>
+            <ul class="feature-list">
+              <li>Names, event date or company launch date</li>
+              <li>City, company details or preferred audience</li>
+              <li>Photos, preferred colors, theme style or references</li>
+              <li>Required sections like timeline, gallery, testimonials, portfolio or contact form</li>
+            </ul>
+            <div class="notice-bar" style="margin-top:1.25rem;">
+              <strong>Customization available</strong>
+              <p class="helper-text">Colors, theme style, language text and section structure can all be tailored to your needs.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>Ready to shape your website?</strong>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="templates.html">Templates</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

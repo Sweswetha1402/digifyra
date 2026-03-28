@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birthday Bash | Digifyra</title>
+  <meta name="description" content="Digifyra birthday invitation demo with a playful poster-style layout, save-the-date link and celebration details.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-birthday">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html" aria-label="Digifyra home">
+          <img class="brand__mark" src="digifyra-mark.png" alt="Digifyra logo">
+          <span>Digifyra<small>Birthday Bash Demo</small></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggle>Menu</button>
+        <nav class="site-nav" data-nav>
+          <a href="#schedule">Schedule</a>
+          <a href="#moments">Moments</a>
+          <a href="#details">Details</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <article class="story-card reveal" style="text-align:center; padding:3rem 1.5rem; background:linear-gradient(135deg, rgba(223,140,90,0.18), rgba(143,191,208,0.18));">
+            <div class="eyebrow">21st birthday celebration</div>
+            <h1 class="display">Riya <span>Turns 21</span></h1>
+            <p class="lead" style="margin-inline:auto;">A bright, cheerful birthday website with a poster-style hero, stacked event moments and a celebration-first mood.</p>
+            <div class="hero-actions" style="justify-content:center;">
+              <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Riya+Turns+21&dates=20260718T133000Z/20260718T170000Z&details=Join+Riya's+birthday+celebration.&location=Skyline+Rooftop+Lounge,+Bengaluru" target="_blank" rel="noopener noreferrer">Save to Calendar</a>
+              <a class="btn-secondary" href="#details">See Event Details</a>
+            </div>
+            <div class="countdown" data-countdown="2026-07-18T19:00:00+05:30"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="schedule" class="section">
+        <div class="container grid-3">
+          <article class="detail-card reveal">
+            <h3>Welcome</h3>
+            <p>7:00 PM onwards with music, greetings and a lively start.</p>
+          </article>
+          <article class="detail-card reveal">
+            <h3>Cake moment</h3>
+            <p>Signature cake cut, cheers and the loudest birthday song of the night.</p>
+          </article>
+          <article class="detail-card reveal">
+            <h3>After party</h3>
+            <p>Photos, desserts, conversations and dance-floor energy.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="moments" class="section">
+        <div class="container split-layout">
+          <article class="story-card reveal">
+            <div class="eyebrow">Milestone timeline</div>
+            <div class="timeline">
+              <article class="timeline-item">
+                <div class="timeline-item__dot">School</div>
+                <div><h3>School days</h3><p>Mischief, laughter and endless energy.</p></div>
+              </article>
+              <article class="timeline-item">
+                <div class="timeline-item__dot">College</div>
+                <div><h3>College years</h3><p>New friendships, bigger dreams and better stories.</p></div>
+              </article>
+              <article class="timeline-item">
+                <div class="timeline-item__dot">Now</div>
+                <div><h3>Turning 21</h3><p>A night to celebrate growth, joy and exciting new beginnings.</p></div>
+              </article>
+            </div>
+          </article>
+          <article class="story-card reveal">
+            <div class="eyebrow">Celebration mood board</div>
+            <div class="template-card__mosaic">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <p class="helper-text" style="margin-top:1rem;">Confetti colors, rooftop lights, dessert corners and photo-friendly moments.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-layout">
+          <article class="info-panel reveal">
+            <div class="eyebrow">Birthday gallery</div>
+            <div class="media-grid">
+              <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=900&q=80" alt="Birthday cake setup">
+              <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80" alt="Birthday celebration balloons">
+              <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=900&q=80" alt="Birthday party decor">
+            </div>
+          </article>
+          <article class="game-card reveal">
+            <div class="eyebrow">Mini party game</div>
+            <h3>Which birthday vibe fits Riya best?</h3>
+            <p class="helper-text">Tap one option and reveal the party answer.</p>
+            <div class="quiz-options">
+              <button class="btn-secondary" type="button" data-quiz-answer="Not quite. The real vibe is rooftop lights, desserts and lots of photos.">Quiet dinner and early night</button>
+              <button class="btn-secondary" type="button" data-quiz-answer="Exactly. Rooftop music, desserts and photo moments are the perfect fit.">Rooftop music, desserts and photo corners</button>
+              <button class="btn-secondary" type="button" data-quiz-answer="Nice guess, but this celebration is brighter and more social than that.">Formal ballroom evening</button>
+            </div>
+            <p class="fine-print" data-quiz-result>Select one option to reveal the answer.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="details" class="section">
+        <div class="container notice-bar reveal">
+          <div class="split-layout">
+            <div>
+              <div class="eyebrow">Event details</div>
+              <h2 class="section-title">Skyline Rooftop Lounge, Bengaluru</h2>
+              <p class="section-copy">Saturday, 18 July 2026 at 7 PM. Dress colorful, bring your best energy and get ready for a joyful evening.</p>
+            </div>
+            <div class="stack-actions" style="align-content:center; justify-content:flex-start;">
+              <a class="btn" href="templates.html">More Templates</a>
+              <a class="btn-secondary" href="order.html?template=Birthday%20Bash&category=Birthday%20Invitation%20Website">Use This Theme</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><strong>Digifyra Birthday Template</strong></div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="templates.html">Templates</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

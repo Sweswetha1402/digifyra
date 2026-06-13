@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blue Ember Bistro Menu | Digifyra</title>
-  <meta name="description" content="Sample QR restaurant menu website by Digifyra with featured dishes, category-based menu cards, pricing and mobile-friendly browsing.">
+  <title>Saffron Coast Kitchen | QR Menu</title>
+  <meta name="description" content="Mobile-friendly QR restaurant menu with branded QR code, category browsing, offers, and restaurant details.">
+  <meta name="theme-color" content="#c96f2d">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -17,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-company">
+<body class="page-company restaurant-menu-page">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXJ9GGBV"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -27,104 +28,107 @@
       <div class="container site-header__inner">
         <a class="brand" href="index.html" aria-label="Digifyra home">
           <img class="brand__mark" src="digifyra-mark.png" alt="Digifyra logo">
-          <span>Digifyra<small>QR Restaurant Menu Demo</small></span>
+          <span>Saffron Coast<small>Restaurant QR Menu</small></span>
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggle>Menu</button>
         <nav class="site-nav" data-nav>
-          <a href="#featured">Featured</a>
+          <a href="#highlights">Highlights</a>
           <a href="#menu">Menu</a>
-          <a href="#details">Details</a>
+          <a href="#offers">Offers</a>
+          <a href="#visit">Visit</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="section">
-        <div class="container restaurant-hero reveal">
-          <article class="restaurant-hero__copy">
-            <div class="eyebrow">Sample restaurant menu template</div>
-            <h1 class="display">Blue Ember <span>Bistro</span></h1>
-            <p class="lead">A warm, modern QR menu website for dine-in and takeaway browsing with featured dishes, category cards, pricing and contact details.</p>
-            <div class="tag-row">
-              <span class="tag">Scan-ready menu</span>
-              <span class="tag">Mobile-first</span>
-              <span class="tag">Easy to update</span>
+      <section class="section restaurant-showcase">
+        <div class="container restaurant-showcase__grid reveal">
+          <article class="restaurant-showcase__copy">
+            <div class="eyebrow">Scan. Browse. Order.</div>
+            <h1 class="display">Saffron Coast <span>Kitchen</span></h1>
+            <p class="lead">A polished QR menu project for modern restaurants. Customers scan the branded QR code and instantly open a clean, mobile-first menu with categories, featured dishes, timings, and contact actions.</p>
+
+            <div class="restaurant-showcase__chips">
+              <span>Live QR Menu</span>
+              <span>Brand-first Design</span>
+              <span>Fast on Mobile</span>
             </div>
-            <div class="stack-actions" style="margin-top:1rem;">
-              <a class="btn" href="order.html?template=QR%20Restaurant%20Menu&category=QR%20Restaurant%20Menu">Use This Theme</a>
-              <a class="btn-secondary" href="templates.html">Back to Templates</a>
+
+            <div class="restaurant-showcase__stats">
+              <article>
+                <strong>48</strong>
+                <span>Curated dishes</span>
+              </article>
+              <article>
+                <strong>12 min</strong>
+                <span>Average prep time</span>
+              </article>
+              <article>
+                <strong>4.8/5</strong>
+                <span>Guest favorite rating</span>
+              </article>
+            </div>
+
+            <div class="stack-actions restaurant-showcase__actions">
+              <a class="btn" href="#menu">Explore Menu</a>
+              <a class="btn-secondary" href="tel:+919876543210">Call Restaurant</a>
             </div>
           </article>
 
-          <article class="restaurant-hero__panel">
-            <div class="restaurant-hero__image">
-              <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80" alt="Restaurant interior and dining setup">
+          <aside class="restaurant-qr-poster">
+            <div class="restaurant-qr-poster__top">
+              <span class="restaurant-qr-poster__badge">Table QR</span>
+              <strong>Saffron Coast Kitchen</strong>
+              <p>Scan to open the restaurant menu on any phone.</p>
             </div>
-            <div class="restaurant-hero__meta">
-              <div class="restaurant-qr-card">
-                <strong>Table scan menu</strong>
-                <span>Scan the QR to view the latest dishes and prices.</span>
-              </div>
-              <div class="restaurant-mini-note">
-                <strong>Open today</strong>
-                <span>12:00 PM - 10:30 PM</span>
-              </div>
+
+            <div class="restaurant-qr-poster__code">
+              <div class="restaurant-qr-frame" data-qr-root data-menu-url="restaurant-menu.html#menu"></div>
             </div>
-          </article>
+
+            <div class="restaurant-qr-poster__brand">
+              <span>Fresh plates, coastal spice, easy ordering</span>
+              <a href="#menu" data-menu-link>restaurant-menu.html#menu</a>
+            </div>
+
+            <div class="restaurant-qr-poster__actions">
+              <button class="btn" type="button" data-copy-menu-link>Copy Menu Link</button>
+              <button class="btn-secondary" type="button" data-download-qr>Download QR</button>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section class="section restaurant-quick-nav-wrap">
+      <section id="highlights" class="section restaurant-band">
         <div class="container">
-          <div class="restaurant-quick-nav reveal">
-            <a href="#featured">Chef picks</a>
-            <a href="#menu">Full menu</a>
-            <a href="#details">Details</a>
+          <div class="restaurant-band__grid reveal">
+            <article class="restaurant-band__card">
+              <span>Today's spotlight</span>
+              <strong>Sea Salt Prawn Tacos</strong>
+              <p>Soft tacos, lime aioli, mango slaw, and charred pepper drizzle.</p>
+            </article>
+            <article class="restaurant-band__card">
+              <span>House special</span>
+              <strong>Saffron Butter Grill</strong>
+              <p>Signature grill platter with fragrant rice and smoked herb butter.</p>
+            </article>
+            <article class="restaurant-band__card">
+              <span>Quick service</span>
+              <strong>Scan-to-order menu</strong>
+              <p>Perfect for dine-in tables, takeaway counters, and cafe displays.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="featured" class="section">
+      <section class="section restaurant-category-strip-wrap">
         <div class="container">
-          <div class="section-heading reveal">
-            <div class="eyebrow">Chef picks</div>
-            <h2>Featured dishes that lead the menu experience.</h2>
-            <p>Use this section for bestsellers, combos or signature plates you want customers to notice first.</p>
-          </div>
-
-          <div class="restaurant-featured-grid">
-            <article class="restaurant-featured-card reveal">
-              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="Smoked pepper chicken platter">
-              <div class="restaurant-featured-card__body">
-                <div class="restaurant-price-row">
-                  <h3>Smoked Pepper Chicken</h3>
-                  <strong>Rs 320</strong>
-                </div>
-                <p>Grilled chicken with roasted peppers, herbed rice and house sauce.</p>
-              </div>
-            </article>
-
-            <article class="restaurant-featured-card reveal">
-              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Garden harvest bowl">
-              <div class="restaurant-featured-card__body">
-                <div class="restaurant-price-row">
-                  <h3>Garden Harvest Bowl</h3>
-                  <strong>Rs 260</strong>
-                </div>
-                <p>Fresh greens, roasted vegetables, feta, seeds and citrus dressing.</p>
-              </div>
-            </article>
-
-            <article class="restaurant-featured-card reveal">
-              <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80" alt="Classic pasta plate">
-              <div class="restaurant-featured-card__body">
-                <div class="restaurant-price-row">
-                  <h3>Creamy Basil Pasta</h3>
-                  <strong>Rs 290</strong>
-                </div>
-                <p>Silky white sauce pasta finished with basil oil and toasted garlic.</p>
-              </div>
-            </article>
+          <div class="restaurant-category-strip reveal">
+            <a href="#starters">Starters</a>
+            <a href="#mains">Mains</a>
+            <a href="#rice-bowls">Rice & Bowls</a>
+            <a href="#drinks">Drinks</a>
+            <a href="#desserts">Desserts</a>
           </div>
         </div>
       </section>
@@ -132,151 +136,268 @@
       <section id="menu" class="section">
         <div class="container">
           <div class="section-heading reveal">
-            <div class="eyebrow">Menu categories</div>
-            <h2>Sample menu cards with real browsing structure.</h2>
-            <p>This is the actual template direction customers would see when choosing a restaurant menu website.</p>
+            <div class="eyebrow">Menu list</div>
+            <h2>Restaurant menu built for quick mobile scanning.</h2>
+            <p>Search dishes, jump to categories, and keep the browsing flow simple for guests at the table.</p>
           </div>
 
-          <div class="restaurant-menu-grid">
-            <article class="restaurant-menu-card reveal">
-              <div class="restaurant-menu-card__head">
-                <h3>Starters</h3>
-                <span>Quick bites</span>
-              </div>
-              <div class="restaurant-menu-list">
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Crispy Corn Toss</strong>
-                    <p>Sweet corn, peppers and spice glaze.</p>
-                  </div>
-                  <span>Rs 180</span>
-                </div>
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Garlic Bread Basket</strong>
-                    <p>Toasted bread with herb butter dip.</p>
-                  </div>
-                  <span>Rs 140</span>
-                </div>
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Soup of the Day</strong>
-                    <p>Fresh chef special served warm.</p>
-                  </div>
-                  <span>Rs 150</span>
-                </div>
-              </div>
-            </article>
+          <div class="restaurant-toolbar reveal">
+            <label class="restaurant-search">
+              <span>Search menu</span>
+              <input type="search" placeholder="Try burger, pasta, coffee..." data-menu-search>
+            </label>
+            <div class="restaurant-toolbar__meta">
+              <span>Open today: 12:00 PM - 11:00 PM</span>
+              <span data-menu-results>Showing 16 dishes</span>
+            </div>
+          </div>
 
-            <article class="restaurant-menu-card reveal">
-              <div class="restaurant-menu-card__head">
-                <h3>Main Course</h3>
-                <span>House specials</span>
+          <div class="restaurant-menu-sections">
+            <section id="starters" class="restaurant-menu-section reveal">
+              <div class="restaurant-menu-section__head">
+                <div>
+                  <span>Starters</span>
+                  <h3>Begin with bold and shareable plates.</h3>
+                </div>
+                <p>Best for group tables and quick pairings with coolers.</p>
               </div>
-              <div class="restaurant-menu-list">
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Flame Grill Platter</strong>
-                    <p>Chicken, vegetables and seasoned rice.</p>
+              <div class="restaurant-dish-grid">
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="crispy lotus stem honey chilli starter veg">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">Bestseller</span>
+                    <span class="dish-badge dish-badge--soft">Veg</span>
                   </div>
-                  <span>Rs 360</span>
-                </div>
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Paneer Tikka Bowl</strong>
-                    <p>Smoky paneer, salad and mint yogurt.</p>
+                  <div class="restaurant-price-row">
+                    <h4>Crispy Lotus Stem</h4>
+                    <strong>Rs 225</strong>
                   </div>
-                  <span>Rs 310</span>
-                </div>
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Classic Alfredo Pasta</strong>
-                    <p>Creamy sauce with mushrooms and herbs.</p>
+                  <p>Honey chilli glaze, sesame crunch, and spring onion finish.</p>
+                </article>
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="sea salt prawn tacos seafood starter tacos">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">Chef Pick</span>
                   </div>
-                  <span>Rs 290</span>
-                </div>
+                  <div class="restaurant-price-row">
+                    <h4>Sea Salt Prawn Tacos</h4>
+                    <strong>Rs 345</strong>
+                  </div>
+                  <p>Soft tortillas loaded with prawns, mango slaw, and citrus aioli.</p>
+                </article>
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="truffle fries starter potato veg">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge dish-badge--soft">Veg</span>
+                  </div>
+                  <div class="restaurant-price-row">
+                    <h4>Truffle Coast Fries</h4>
+                    <strong>Rs 210</strong>
+                  </div>
+                  <p>Thin-cut fries dusted with truffle seasoning and parmesan snow.</p>
+                </article>
               </div>
-            </article>
+            </section>
 
-            <article class="restaurant-menu-card reveal">
-              <div class="restaurant-menu-card__head">
-                <h3>Beverages</h3>
-                <span>Cold and hot</span>
+            <section id="mains" class="restaurant-menu-section reveal">
+              <div class="restaurant-menu-section__head">
+                <div>
+                  <span>Main Course</span>
+                  <h3>Signature plates designed for full-meal satisfaction.</h3>
+                </div>
+                <p>Grills, pasta, and house-made specialties.</p>
               </div>
-              <div class="restaurant-menu-list">
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Blue Citrus Cooler</strong>
-                    <p>Fresh lime, mint and sparkling soda.</p>
+              <div class="restaurant-dish-grid">
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="saffron butter grill chicken main grill bestseller">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">Bestseller</span>
                   </div>
-                  <span>Rs 110</span>
-                </div>
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Cold Coffee Float</strong>
-                    <p>Chilled coffee with cream topping.</p>
+                  <div class="restaurant-price-row">
+                    <h4>Saffron Butter Grill</h4>
+                    <strong>Rs 465</strong>
                   </div>
-                  <span>Rs 130</span>
-                </div>
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Masala Chai</strong>
-                    <p>Spiced tea brewed fresh to order.</p>
+                  <p>Chargrilled chicken, saffron butter glaze, garlic mash, and roast vegetables.</p>
+                </article>
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="coastal pepper pasta main pasta seafood">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">New</span>
                   </div>
-                  <span>Rs 60</span>
-                </div>
+                  <div class="restaurant-price-row">
+                    <h4>Coastal Pepper Pasta</h4>
+                    <strong>Rs 390</strong>
+                  </div>
+                  <p>Creamy pepper sauce, basil oil, caramelized onion, and garlic crumb.</p>
+                </article>
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="smoked paneer steak veg main">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge dish-badge--soft">Veg</span>
+                  </div>
+                  <div class="restaurant-price-row">
+                    <h4>Smoked Paneer Steak</h4>
+                    <strong>Rs 355</strong>
+                  </div>
+                  <p>Pan-seared paneer, charred greens, pepper jus, and lemon herb rice.</p>
+                </article>
               </div>
-            </article>
+            </section>
 
-            <article class="restaurant-menu-card reveal">
-              <div class="restaurant-menu-card__head">
-                <h3>Desserts</h3>
-                <span>Sweet ending</span>
+            <section id="rice-bowls" class="restaurant-menu-section reveal">
+              <div class="restaurant-menu-section__head">
+                <div>
+                  <span>Rice & Bowls</span>
+                  <h3>Comforting bowls that travel well for dine-in and takeaway.</h3>
+                </div>
+                <p>Balanced meals with fresh toppings and house sauces.</p>
               </div>
-              <div class="restaurant-menu-list">
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Warm Brownie Sundae</strong>
-                    <p>Chocolate brownie with vanilla scoop.</p>
+              <div class="restaurant-dish-grid">
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="firecracker chicken bowl rice bowl chicken">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">Popular</span>
                   </div>
-                  <span>Rs 170</span>
-                </div>
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Classic Cheesecake</strong>
-                    <p>Silky baked cheesecake with berry glaze.</p>
+                  <div class="restaurant-price-row">
+                    <h4>Firecracker Chicken Bowl</h4>
+                    <strong>Rs 335</strong>
                   </div>
-                  <span>Rs 190</span>
-                </div>
-                <div class="restaurant-menu-item">
-                  <div>
-                    <strong>Caramel Pudding</strong>
-                    <p>Light custard with golden caramel top.</p>
+                  <p>Sticky chicken, sesame rice, cucumber ribbons, and spicy mayo drizzle.</p>
+                </article>
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="garden harvest bowl veg rice bowl healthy">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge dish-badge--soft">Veg</span>
                   </div>
-                  <span>Rs 120</span>
-                </div>
+                  <div class="restaurant-price-row">
+                    <h4>Garden Harvest Bowl</h4>
+                    <strong>Rs 295</strong>
+                  </div>
+                  <p>Roasted vegetables, herbed rice, feta crumble, and citrus tahini dressing.</p>
+                </article>
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="malabar prawn rice seafood bowl rice">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">Chef Pick</span>
+                  </div>
+                  <div class="restaurant-price-row">
+                    <h4>Malabar Prawn Rice</h4>
+                    <strong>Rs 425</strong>
+                  </div>
+                  <p>Coconut-laced rice, curry leaf prawns, pickled onions, and mint chutney.</p>
+                </article>
               </div>
-            </article>
+            </section>
+
+            <section id="drinks" class="restaurant-menu-section reveal">
+              <div class="restaurant-menu-section__head">
+                <div>
+                  <span>Drinks</span>
+                  <h3>Freshly mixed coolers, coffees, and crowd-pleasing sips.</h3>
+                </div>
+                <p>Perfect to pair with starters and desserts.</p>
+              </div>
+              <div class="restaurant-dish-grid">
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="kokum fizz drinks cooler mocktail">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">Refresh</span>
+                  </div>
+                  <div class="restaurant-price-row">
+                    <h4>Kokum Citrus Fizz</h4>
+                    <strong>Rs 145</strong>
+                  </div>
+                  <p>Tart kokum, sparkling soda, basil seeds, and orange peel mist.</p>
+                </article>
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="cold coffee sea salt caramel drinks coffee">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">Cold Brew</span>
+                  </div>
+                  <div class="restaurant-price-row">
+                    <h4>Sea Salt Caramel Coffee</h4>
+                    <strong>Rs 165</strong>
+                  </div>
+                  <p>Chilled coffee shaken with caramel cream and sea salt foam.</p>
+                </article>
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="ginger lemon spritz drinks mocktail">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge dish-badge--soft">Zero Sugar</span>
+                  </div>
+                  <div class="restaurant-price-row">
+                    <h4>Ginger Lemon Spritz</h4>
+                    <strong>Rs 135</strong>
+                  </div>
+                  <p>Fresh lemon, muddled ginger, soda lift, and mint finish.</p>
+                </article>
+              </div>
+            </section>
+
+            <section id="desserts" class="restaurant-menu-section reveal">
+              <div class="restaurant-menu-section__head">
+                <div>
+                  <span>Desserts</span>
+                  <h3>Finish with warm bakes and smooth chilled desserts.</h3>
+                </div>
+                <p>Easy upsell items for dine-in and takeaway bundles.</p>
+              </div>
+              <div class="restaurant-dish-grid">
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="saffron tres leches dessert cake">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">Signature</span>
+                  </div>
+                  <div class="restaurant-price-row">
+                    <h4>Saffron Tres Leches</h4>
+                    <strong>Rs 220</strong>
+                  </div>
+                  <p>Milk-soaked sponge with saffron cream and pistachio dust.</p>
+                </article>
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="dark chocolate pot dessert chocolate">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">Rich</span>
+                  </div>
+                  <div class="restaurant-price-row">
+                    <h4>Dark Chocolate Pot</h4>
+                    <strong>Rs 195</strong>
+                  </div>
+                  <p>Silky chocolate mousse topped with cocoa nib crunch and vanilla cream.</p>
+                </article>
+                <article class="restaurant-dish-card" data-menu-item data-menu-filter="baked cheesecake berry dessert">
+                  <div class="restaurant-dish-card__meta">
+                    <span class="dish-badge">Classic</span>
+                  </div>
+                  <div class="restaurant-price-row">
+                    <h4>Berry Baked Cheesecake</h4>
+                    <strong>Rs 235</strong>
+                  </div>
+                  <p>New York style cheesecake with berry compote and almond crumble.</p>
+                </article>
+              </div>
+            </section>
           </div>
         </div>
       </section>
 
-      <section id="details" class="section">
-        <div class="container grid-2">
-          <article class="info-panel reveal">
-            <div class="eyebrow">Restaurant details</div>
+      <section id="offers" class="section">
+        <div class="container">
+          <div class="restaurant-offer-panel reveal">
+            <div>
+              <span class="eyebrow">Today's offer</span>
+              <h2>Lunch combo for two at Rs 799</h2>
+              <p>Includes one starter, two house bowls, and two coolers. Great for table tents, stories, and QR posters near the billing counter.</p>
+            </div>
+            <a class="btn" href="https://wa.me/919876543210" target="_blank" rel="noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="visit" class="section">
+        <div class="container restaurant-info-grid">
+          <article class="restaurant-info-card reveal">
+            <div class="eyebrow">Visit us</div>
+            <h3>Saffron Coast Kitchen</h3>
+            <p>22 Marina View Road, Besant Nagar, Chennai</p>
             <ul class="feature-list">
-              <li>Blue Ember Bistro, Lake View Road, Coimbatore</li>
-              <li>Dine-in, takeaway and weekend family specials</li>
-              <li>Customizable with logo, contact details, timings and offers</li>
+              <li>Open daily from 12:00 PM to 11:00 PM</li>
+              <li>Dine-in, takeaway, and family table reservations</li>
+              <li>Call +91 98765 43210 for bookings and pre-orders</li>
             </ul>
           </article>
-          <article class="info-panel reveal">
-            <div class="eyebrow">What can be added</div>
+          <article class="restaurant-info-card reveal">
+            <div class="eyebrow">Perfect for</div>
             <ul class="feature-list">
-              <li>Category filters, branch-specific menus and combo banners</li>
-              <li>Veg and non-veg labels, bestseller tags and offer highlights</li>
-              <li>Map, reservation link or contact button if needed</li>
+              <li>QR table menus in restaurants, cafes, and food courts</li>
+              <li>Brandable print posters with logo, colors, and contact details</li>
+              <li>Fast customer browsing without installing any app</li>
             </ul>
           </article>
         </div>
@@ -286,7 +407,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <strong>Digifyra QR Menu Template</strong>
+          <strong>Saffron Coast Kitchen QR Menu</strong>
         </div>
         <div class="footer-links">
           <a href="index.html">Home</a>
@@ -296,6 +417,7 @@
       </div>
     </footer>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

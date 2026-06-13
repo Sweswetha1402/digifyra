@@ -24,6 +24,9 @@ if (headerInner) {
   themeToggle.className = "theme-toggle";
   themeToggle.setAttribute("aria-label", "Toggle light and dark theme");
   const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+  const lightThemeColor = document.body.classList.contains("restaurant-menu-page")
+    ? "#c96f2d"
+    : "#2563EB";
 
   const updateThemeLabel = () => {
     const isDark = document.body.classList.contains("theme-dark");
@@ -32,7 +35,7 @@ if (headerInner) {
     themeToggle.title = isDark ? "Switch to light mode" : "Switch to dark mode";
     themeToggle.setAttribute("aria-pressed", String(isDark));
     if (themeColorMeta) {
-      themeColorMeta.setAttribute("content", isDark ? "#020617" : "#2563EB");
+      themeColorMeta.setAttribute("content", isDark ? "#020617" : lightThemeColor);
     }
   };
 
@@ -167,7 +170,7 @@ document.querySelectorAll("[data-form-intent]").forEach((form) => {
     const name = form.querySelector('[name="name"]')?.value.trim() || "there";
     const email = form.querySelector('[name="email"]')?.value.trim() || "not provided";
     const phone = form.querySelector('[name="phone"]')?.value.trim() || "not provided";
-    const service = form.querySelector('[name="service"]')?.value.trim() || "website";
+    const service = form.querySelector('[name="service"]')?.value.trim() || "design service";
     const templateName = form.querySelector('[name="template_name"]')?.value.trim() || "Not specified";
     const plan = form.querySelector('[name="plan"]')?.value.trim() || "custom";
     const timeline = form.querySelector('[name="timeline"]')?.value.trim() || "Not specified";
@@ -175,7 +178,7 @@ document.querySelectorAll("[data-form-intent]").forEach((form) => {
     const message = [
       "Hello Digifyra,",
       "",
-      "I would like to enquire about a website.",
+      "I would like to enquire about a Digifyra service.",
       `Name: ${name}`,
       `Email: ${email}`,
       `Phone: ${phone}`,
@@ -222,3 +225,106 @@ document.querySelectorAll("[data-quiz-answer]").forEach((button) => {
     }
   });
 });
+
+const qrRoot = document.querySelector("[data-qr-root]");
+const qrLink = document.querySelector("[data-menu-link]");
+const copyMenuLinkButton = document.querySelector("[data-copy-menu-link]");
+const downloadQrButton = document.querySelector("[data-download-qr]");
+
+if (qrRoot && qrLink) {
+  const rawMenuPath = qrRoot.dataset.menuUrl || "restaurant-menu.html#menu";
+  const buildMenuUrl = () => {
+    if (/^https?:\/\//i.test(rawMenuPath)) {
+      return rawMenuPath;
+    }
+
+    try {
+      return new URL(rawMenuPath, window.location.href).href;
+    } catch (error) {
+      return rawMenuPath;
+    }
+  };
+
+  const menuUrl = buildMenuUrl();
+  qrLink.textContent = menuUrl;
+  qrLink.href = menuUrl;
+
+  if (typeof window.QRCode !== "undefined") {
+    qrRoot.innerHTML = "";
+    new window.QRCode(qrRoot, {
+      text: menuUrl,
+      width: 220,
+      height: 220,
+      colorDark: "#1f130d",
+      colorLight: "#fffdf8",
+      correctLevel: window.QRCode.CorrectLevel.H,
+    });
+  }
+
+  if (copyMenuLinkButton) {
+    copyMenuLinkButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(menuUrl);
+        copyMenuLinkButton.textContent = "Link Copied";
+        window.setTimeout(() => {
+          copyMenuLinkButton.textContent = "Copy Menu Link";
+        }, 1800);
+      } catch (error) {
+        window.prompt("Copy this menu link:", menuUrl);
+      }
+    });
+  }
+
+  if (downloadQrButton) {
+    downloadQrButton.addEventListener("click", () => {
+      const qrCanvas = qrRoot.querySelector("canvas");
+      const qrImage = qrRoot.querySelector("img");
+      const downloadLink = document.createElement("a");
+      downloadLink.download = "saffron-coast-menu-qr.png";
+
+      if (qrCanvas) {
+        downloadLink.href = qrCanvas.toDataURL("image/png");
+      } else if (qrImage) {
+        downloadLink.href = qrImage.src;
+      } else {
+        return;
+      }
+
+      downloadLink.click();
+    });
+  }
+}
+
+const menuSearchInput = document.querySelector("[data-menu-search]");
+const menuItems = Array.from(document.querySelectorAll("[data-menu-item]"));
+const menuSections = Array.from(document.querySelectorAll(".restaurant-menu-section"));
+const menuResults = document.querySelector("[data-menu-results]");
+
+if (menuSearchInput && menuItems.length) {
+  const renderMenuFilter = () => {
+    const query = menuSearchInput.value.trim().toLowerCase();
+    let visibleItems = 0;
+
+    menuItems.forEach((item) => {
+      const haystack = (item.dataset.menuFilter || item.textContent || "").toLowerCase();
+      const isMatch = !query || haystack.includes(query);
+      item.classList.toggle("is-hidden", !isMatch);
+      if (isMatch) {
+        visibleItems += 1;
+      }
+    });
+
+    menuSections.forEach((section) => {
+      const sectionHasVisibleItems = section.querySelector("[data-menu-item]:not(.is-hidden)");
+      section.classList.toggle("is-hidden", !sectionHasVisibleItems);
+    });
+
+    if (menuResults) {
+      menuResults.textContent =
+        visibleItems === 1 ? "Showing 1 dish" : `Showing ${visibleItems} dishes`;
+    }
+  };
+
+  menuSearchInput.addEventListener("input", renderMenuFilter);
+  renderMenuFilter();
+}
